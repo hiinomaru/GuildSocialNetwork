@@ -13,7 +13,7 @@ public class RequestManager {
 
     public RequestManager(DialogPanel panel) {
         try {
-            socket = new Socket("25.63.13.135", 2107);
+            socket = new Socket("25.63.13.135", 6309);
             oos = new DataOutputStream(socket.getOutputStream());
             ois = new DataInputStream(socket.getInputStream());
         } catch (IOException e) {
