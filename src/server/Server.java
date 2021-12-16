@@ -3,8 +3,7 @@ package server;
 import FileSystem.*;
 import QueryManager.*;
 import com.google.gson.Gson;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import sun.awt.windows.ThemeReader;
+
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -20,6 +19,7 @@ public class Server {
     private LogManager logManager;
     private Server_FileSystem serverFileSystem;
     private AnswerManager ansManager;
+    private AnswerManager reqman;
     public Server(){
         logManager = new LogManager(this);
         try {

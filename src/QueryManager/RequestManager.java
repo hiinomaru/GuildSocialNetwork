@@ -13,7 +13,7 @@ public class RequestManager {
 
     public RequestManager(DialogPanel panel) {
         try {
-            socket = new Socket("25.62.187.132", 61944);
+            socket = new Socket("25.63.13.135", 2107);
             oos = new DataOutputStream(socket.getOutputStream());
             ois = new DataInputStream(socket.getInputStream());
         } catch (IOException e) {
@@ -59,8 +59,8 @@ public class RequestManager {
                 oos.writeUTF(Request);
                 oos.flush();
                 data = ois.readUTF();
-                System.out.println(data);
-                System.out.println(data.equals("NULL") ? "SUCCESS" : "ERROR");
+                System.out.println("data" + data);
+                System.out.println(data.equals("NULL") ? "SUCCESS" : "ddERROR");
             } catch (IOException e) {
                 e.printStackTrace();
             }
